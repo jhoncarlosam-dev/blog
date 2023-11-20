@@ -1,0 +1,53 @@
+---
+import { work } from "../../data/work.json";
+---
+
+<section>
+  <div
+    class="text-zinc-500 text-xs flex flex-col lg:flex-row gap-4 justify-between w-full font-medium px-8 md:px-12 lg:px-24 py-6">
+    <div class="flex flex-row gap-4 justify-between">
+      <p>
+        <span>Jhon</span>
+        <span>Acevedo</span>
+      </p>
+      <p>
+        <span>Web</span>
+        <span>Developer</span>
+      </p>
+    </div>
+    <p>
+      <a class="underline" href="#_">jhoncarlosacevedomendoza@gmail.com</a>
+    </p>
+  </div>
+  <div
+    class="px-8 md:px-12 lg:px-24 py-24 lg:pt-64 text-center mx-auto text-zinc-500">
+    <p class="max-w-xl text-zinc-500 text-xl mx-auto font-serif">
+      <em>
+        Jhon Acevedo is a web developer,
+        based in Bucaramanga, Colombia. Lead developer at 99dev, his work is focused on creating
+        focuses on creating tailored, engaging and effective digital experiences.
+      </em>
+    </p>
+    <div
+      class="grid grid-cols-1 gap-4 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-24 max-w-7xl mx-auto">
+      {
+        work.map((template) => (
+          <>
+            <a
+              href={template.link}
+              class="bg-zinc-100 rounded-md overflow-hidden ">
+              <div class="p-4 lg:px-12 lg:py-24 ">
+                <img
+                  class=" rounded-lg shadow hover:shaodow-3xl duration-500 hover:-translate-y-4"
+                  src={template.img}
+                  alt="#"
+                />
+                <p class="text-zinc-500 text-sm mt-8"> {template.title}</p>
+              </div>
+            </a>
+          </>
+        ))
+      }
+    </div>
+  </div>
+</section>
